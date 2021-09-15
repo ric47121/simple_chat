@@ -1,0 +1,13 @@
+* {
+    /* color: red; */
+}
+
+#output {
+    height: 200px;
+    width: 200px;
+    border: 1px solid rgb(87, 82, 82);
+}
+
+#status {
+    color: #777;
+}
