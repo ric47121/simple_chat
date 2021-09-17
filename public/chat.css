@@ -1,8 +1,4 @@
-* {
-    /* color: red; */
-}
-
-#output {
+/* #output {
     height: 200px;
     width: 200px;
     border: 1px solid rgb(87, 82, 82);
@@ -10,4 +6,75 @@
 
 #status {
     color: #777;
+}
+ */
+
+
+/* Global */
+
+body {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    background-color: #f8f8f8;
+    font-size: 24px;
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #424547;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #424547;
+}
+
+h3 {
+    font-size: 24px;
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #424547;
+}
+
+p {
+    font-size: 16px;
+}
+
+input {
+    font-size: 24px;
+}
+
+input[type=text] {
+    color: #424547;
+    border: 1px solid #c2c2c2;
+    background-color: white;
+}
+
+em {
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+}
+
+
+/* Chat */
+
+#output {
+    background-color: white;
+    overflow: auto;
+    height: 230px;
+    width: 100%;
+    padding: 10px;
+    border: 8px solid #424547;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+#username {
+    width: 28%;
+}
+
+#message {
+    width: 70%;
 }

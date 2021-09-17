@@ -15,7 +15,11 @@ const socket = io()
 // })
 
 $("#send").click(function() {
-    console.log('click')
+    send_message()
+})
+
+function send_message() {
+
     let user = $("#username").val()
     let msg = $("#message").val()
 
@@ -23,7 +27,17 @@ $("#send").click(function() {
         message: msg,
         username: user
     })
-})
+    $('#message').val('');
+
+}
+
+$('#message').keypress(function(e) {
+    if (e.keyCode == 13) {
+        send_message()
+            // console.log(mensajes);
+    }
+});
+
 
 $("#message").keypress(function() {
     // console.log("typing..")
@@ -38,6 +52,8 @@ socket.on('chat:message', function(data) {
 
     let html = `<p>${data.username}: ${data.message}</p>`
     $("#output").html($("#output").html() + html)
+
+    $('#output')[0].scrollTop = $('#output')[0].scrollHeight;
 
 })
 
